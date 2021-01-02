@@ -1,0 +1,525 @@
+*
+{
+    padding: 0;
+    margin: 0;
+}
+html,body{width: 100%; height:100%;}
+::-webkit-scrollbar { 
+    display: none; 
+}
+/*css cho menu*/
+ul{ list-style-type: none; }
+.menu
+{
+    position: relative;
+    background-image: url(images/top2.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    width: 100%;
+    height: 75px;
+    transition: all 0.2s ease-out;
+}
+.menu .logodau
+{
+    width: 50px;
+    height: 50px;
+    margin: 10px;
+    position: absolute;
+}
+.logodau img
+{
+    max-width: 100%;
+}
+.menu.menumoi .logodau 
+{
+    width: 40px;
+    height: 40px;
+    margin: 13px;
+}
+.menu.menumoi 
+{
+    background-image: url(images/aboutendbg.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    position: fixed;
+    height: 70px;
+    z-index: 10;
+    width: 100%;
+}
+.menu.menumoi ul li a:hover
+{
+    color: black;
+} 
+.menu.menumoi ul li:hover .submenu
+{
+    background-color: #fff;
+}
+
+.menu p 
+{
+    color: black;
+    padding: 10px 0px 6px 66px;
+    margin: 0;
+    float: left;
+    font-family: 'Comfortaa', cursive;
+    font-weight: bold;
+    font-size: 40px;
+    cursor: pointer;
+}
+.menu.menumoi p 
+{
+    font-size: 30px;
+    padding: 14px 0px 6px 66px;
+}
+.menu ul 
+{
+    display: inline-flex;
+    list-style: none;
+    margin: 0px;
+    padding: 9px 0px 0px 50px;
+}
+.menu.menumoi ul li
+{
+    padding: 12px 10px;
+}
+.menu ul li
+{
+    display:block;
+    margin: 0px 10px;
+    padding: 16px 10px;
+}
+.menu ul li a
+{
+    text-decoration: none;
+    font-size: 20px;
+    font-family: 'Comfortaa', cursive;
+    color: black;
+}
+.menu ul li:hover
+{
+    font-size: 20px;
+    transition: 0.1s;
+}
+.menu ul li a:hover
+{
+    color: #17a2b8;
+}
+.home
+{
+    color: #fff;
+}
+.submenu
+{
+    display:none;
+    z-index: 10;
+}
+.submenu ul li a
+{
+    font-size: 20px;
+    color: black;
+}
+.menu ul li:hover .submenu
+{
+    border-radius:5px;
+    display: block;
+    position: absolute;
+    background-color: #fff;
+    margin-top: 10px; 
+    margin-left: -5px;   
+} 
+.menu.menumoi ul li:hover .submenu
+{
+    background-color:#9fb6da;
+}  
+.menu:hover .submenu ul
+{
+    display: block;
+}
+.menu:hover .submenu ul li
+{
+    text-align: left;
+    margin-left: -37px;
+}
+.menumoi .searchbox
+{
+    margin: 18px 77px 0px 30px;
+}
+.menu.menumoi ul 
+{
+    padding: 10px 0px 13px 50px;
+}
+.searchbox 
+{
+    position: relative;
+    float: right;
+    height: 50px;
+    width: 80px;
+    margin: 18px 77px 0px 30px;
+    transition: all 0.5s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+}
+.searchbox.active
+{
+    width: 350px;
+    z-index: 10;
+}
+.searchbox input
+{
+    display: inline-block;
+    height: 70%;
+    width: 100%;
+    padding:0 60px 0 20px;
+    z-index: 10;
+    opacity: 0;
+    border-style: groove;
+
+}
+input 
+{
+  border-top-style: hidden;
+  border-right-style: hidden;
+  border-left-style: hidden;
+  border-bottom-style: hidden;
+}
+.no-outline:focus {
+  outline: none;
+}
+.searchbox input.active
+{
+    border-radius: 50px;
+    opacity: 1;
+
+}
+.searchbox .search-btn
+{
+    position: absolute;
+    text-align: center;
+    transform: translateY(-50%) rotate(360deg);
+    top: 34.8%;
+    right: 0px;
+    height: 42px;
+    width: 42px;
+    line-height: 42px;
+    z-index: 1;
+    border-radius: 50px;
+    background: #000;
+    cursor: pointer;
+    transition: 0.3s;
+}
+.menu.menumoi .searchbox .search-btn{background-color: #9cb7d8}
+i.fa.fa-search 
+{
+    color: #fff;
+}
+.searchbox .search-btn:hover
+{
+    background-color: #9cb7d8;
+}
+.searchbox .search-btn.active {
+    right: -1px;
+    margin-top: 0px;
+    height: 40px;
+    width: 40px;
+    line-height: 39px;
+    background: #3f4044;
+    color: #fff;
+}
+.searchbox .cancel-btn 
+{
+    position: absolute;
+    right: 14px;
+    top: 34.8%;
+    transform: translateY(-50%);
+    cursor: pointer;
+    transition: all 0.5s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+    opacity: 0;
+    color: black;
+}
+.searchbox .cancel-btn.active
+{
+    right: -22px;
+    transform: translateY(-50%) rotate(360deg);
+    color: #000;
+    transition: 0.5s;
+    opacity: 1;
+}
+
+.nutlogin 
+{
+    position: absolute;
+    right: 25px;
+    top: 20%;
+    z-index: 20;
+}
+
+.nutlogin a
+{
+    text-decoration: none;
+    color: #000;
+    font-size: 28px;
+}
+.menu.menumoi .nutlogin a {color: #9cb7d8;}
+.nutlogin a:hover
+{
+    color: #9cb7d8;
+}
+.menu.menumoi .nutlogin a:hover {color: #000;}
+/*het menu*/
+/*trangdau*/
+.contentdau 
+{
+    background-color: #8ccbe1;
+    background-size: cover;
+    background-image: url(images/aboutbg.jpg);
+    background-repeat: no-repeat;
+    background-position: center;
+    height: 620px;
+}
+.anhcontent 
+{
+    width: 674px;
+    position: absolute;
+    overflow: hidden;
+    top: 2%;
+    left: 48%;
+}
+
+.anhcontent img 
+{
+    max-width: 110%;
+}
+.chutrai 
+{
+    padding: 100px 0px 70px 75px;
+    width: 48%;
+    height: 590px;
+    position: relative;
+    z-index: 1;
+    box-sizing: border-box;
+    transition: all 0.3 ease-out;
+}
+.chuto h6 {
+    color: #fff;
+}
+
+.chuto span {
+    color: black;
+    line-height: 8px;
+}
+.chuto h2 
+{
+    font-size: 57px;
+    line-height: 67px;
+    font-weight: 700;
+    letter-spacing: 0px;
+    font-family: 'Comfortaa', cursive;
+}
+.chuto 
+{
+    padding: 20px 20px;
+}
+.chuto p 
+{
+    font-size: 17px;
+    line-height: 28px;
+    font-weight: 400;
+    letter-spacing: 0px;
+    color: black;
+}
+.list ul li p
+{
+    display: inline-block;
+    color: #fff;
+}
+i.fa.fa-check {color: #fff;background-color: #17a2b8;width: 30px;height: 30px;padding-top: 5px;margin: 15px 20px;text-align: center;border: 1px solid #17a2b8;border-radius: 50px;}
+/*trangdau*/
+
+/*tranggiua*/
+.contenthai
+{
+    width: 100%;
+    height: 100%;
+    padding:110px 70px;
+}
+.imgtrai
+{
+    width: 48%;
+    height: 465px;
+    overflow: hidden;
+    border: 1px solid #fff;
+    border-radius: 50px;
+    float: left;
+}
+.imgtrai img
+{
+    max-width: 100%;
+    height: 465px
+}
+.textphai
+{
+    padding: 78px 0;
+    width: 46%;
+    float: right;
+}
+
+.contentba
+{
+    width: 100%;
+    height: 85%;
+    padding:20px 70px 0px 70px;
+}
+.imgphai
+{
+    width: 52%;
+    height: 465px;
+    overflow: hidden;
+    border: 1px solid #fff;
+    border-radius: 50px;
+    float: right;
+}
+.imgphai img
+{
+    max-width: 100%;
+    height: 465px
+}
+.texttrai
+{
+    padding: 78px 0;
+    width: 42%;
+    float: left;
+}
+.counters {
+    color: #212529;
+    padding: 10px 20px 50px 20px;
+}
+
+.counters .container {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-gap: 30px;
+    text-align: center;
+}
+
+.counters i {
+    color: #9dc6e2;
+    font-size: 54px;
+}
+.counters h3 {
+    color: #9fc2e1;
+}
+.counters .counter {
+    font-size: 45px;
+    margin: 2px 0;
+}
+/*het tranggiua*/
+
+/*trangcuoi*/
+.content4
+{
+    width: 100%;
+    height: 65%;
+    background-size: cover;
+    background-image: url(images/aboutendbg.jpg);
+}
+.content4 .chu 
+{
+    text-align: center;
+    padding: 76px 0px 20px 0;
+}
+.chulon 
+{
+    font-family: 'Comfortaa', cursive;
+    color: slateblue;
+    font-size: 50px;
+}
+.chunho 
+{
+    font-family: 'Comfortaa',cursive;
+}
+
+.chulon span {color: violet;}
+.khungemail
+{
+    text-align: center;
+}
+.khung input
+{
+    width: 50%;
+    height: 40px;
+    position: relative!important;
+    display: inline-block;
+    border-radius: 50px;
+    padding: 0px 20px 0px 20px;
+    margin-bottom: 3px;
+}
+.nutsubmit
+{
+    padding: 20px;
+}
+.nutsubmit input
+{
+    border-radius: 50px;
+    height: 40px;
+    width: 110px;
+    background-color: #0062cc;
+    margin: 3px;
+    color: white;
+    font-weight: 400;
+}
+/*het trang cuoi*/
+/*end*/
+.end{ background-color: black; width: 100%; position: relative;  overflow: hidden; }
+.end .info .row{text-align: center; color: #fff;}
+.site-footer.end {
+    padding: 80px 0 30px;
+}
+.ttshop {
+    text-align: left;
+}
+.ttshop ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+}
+.end .info .row .ttshop ul li i,
+.end .info .row .cskh ul li i
+{
+    font-size: 24px;
+    line-height: 1;
+    width: 40px;
+    -webkit-box-flex: 0;
+    flex: 0 0 auto;
+}
+.end .info .row .ttshop ul li,
+.end .info .row .cskh ul li
+{
+    display: flex;
+    margin-bottom: 15px;
+}
+.end .info .row .ttshop p,
+.end .info .row .cskh p
+{font-size: 20px;margin-bottom: 10px;position: relative;line-height: 1.3;font-weight: bold;}
+
+.keduoi {
+    width: 15%;
+    height: 2px;
+    background: #fff;
+    margin: 0px 0 30px 0;
+}
+.ttshop ul li,
+.cskh ul li,
+.cskh ul li a
+{
+    text-decoration: none;
+    font-family: 'Comfortaa', cursive;;
+    color: white;
+}
+.logo .logoimg
+{
+    width: 200px;
+    height: 200px;
+}
+.logoimg img
+{
+    max-width: 100%;
+    background-size: cover;
+}
